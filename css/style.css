@@ -1,303 +1,563 @@
-/* CSS reset */
-*, *::after, *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Global Style */
-  body {
-    font-family: 'Ubuntu';
-    width: 100%;
-  
-  }
-  
-  img {
-    width: 100%;
-  
-  }
-  
-  ul {
-    list-style: none;
-  
-  }
-  
-  a {
-    text-decoration: none;
-  
-  }
-  
-  main {
-    margin: 100px;
-  
-  }
-  
-  section {
-    min-height: 90vh;
-  
-  }
-  
-  .tentang .portofolio .nilai .kontak {
-    padding: 100px;
-  
-  }
-  
-  .section-title {
-    font-size: 28px;
-    text-decoration: underline;
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+}
+
+/* header */
+header {
+	height: 100vh;
+	width: 100%;
+	background-image: url(../assets/tentang\ diri\ saya.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.logo{
+	color: rgb(255, 255, 255);
+	font-size: 35px;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+/* nav */
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 45px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+	font-size: 20px;
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+nav ul li a:hover{
+	color: #0058f9;
+	transition: .4s;
+}
+
+span{
+	color: #0058f9;
+}
+
+/* button */
+.btn{
+	background-color:#0058f9;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 15px 20px 10px 20px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+
+.btn:hover{
+	transform: scale(1.2);
+}
+
+/* konten */
+.content{
+	position: absolute;
+	top: 50%;
+	left:8%;
+	transform: translateY(-50%);
+}
+
+h1{
+	color: white;
+	margin: 20px 0px 20px;
+	font-size: 75px;
+}
+
+h3{
+	color: rgb(0, 89, 255);
+	font-size: 25px;
+	margin-bottom: 50px;
+}
+
+h4{
+	color: rgba(0, 81, 255, 0.8);
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+/* about */
+#about{
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #000000;
+}
+
+#about img{
+	height: auto;
+	width: 430px;
+}
+
+.about-text{
+	width: 550px;
+}
+
+.main{
+	width: 1130px;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.about-text h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.about-text h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+
+.about-text p{
+	color: rgba(255, 255, 255, 0.8);
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+button{
+	background-color:#0058f9;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 12px 30px;
+	border-radius: 30px;
+	transition: .4s; 
+	font-size: 15px;
+}
+
+button:hover{
+	background-color: transparent;
+	border: 2px solid #0058f9;
+	cursor: pointer;
+}
+
+/* skill */
+#skills {
+	padding: 100px 0;
+	background: #101010;
+}
+
+#skills .title {
+    position: relative;
     text-align: center;
-    margin-bottom: 25px;
-    padding-top: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.skill-bars{
+    padding: 25px 30px;
+    width: 40%;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    margin: auto 480px;
+/*     height: 102vh; */
+}
+
+.skill-bars .bar{
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+  100%{
+    opacity: 1;
   }
-  
-  .wrapper {
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #0058f9;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 95%;
+}
+.bar .progress-line.css span{
+  width: 80%;
+}
+.bar .progress-line.js span{
+  width: 50%;
+}
+.bar .progress-line.node span{
+  width: 45%;
+}
+.bar .progress-line.react span{
+  width: 20%;
+}
+.bar .progress-line.figma span{
+  width: 82%;
+}
+
+
+
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line.html span::after{
+  content: "95%";
+}
+.progress-line.css span::after{
+  content: "80%";
+}
+.progress-line.js span::after{
+  content: "50%";
+}
+.progress-line.node span::after{
+  content: "45%";
+}
+.progress-line.react span::after{
+  content: "20%";
+}
+.progress-line.figma span::after{
+  content: "82%";
+}
+.progress-line.mulmed span::after{
+content: "92%";
+}
+.progress-line.record span::after{
+content: "46%";
+}
+.progress-line.edit span::after{
+content: "55%";
+}
+.progress-line.prod span::after{
+content: "62%";
+}
+.progress-line.compos span::after{
+content: "54%";
+}
+.progress-line.kungfu span::after{
+content: "99%";
+}
+.progress-line.taekwondo span::after{
+content: "84%";
+}
+.progress-line.karate span::after{
+content: "82%";
+}
+.progress-line.silat span::after{
+content: "65%";
+}
+
+/* projek */
+#proj{
+	background: #191919;
+	width: 100%;
+	padding: 100px 0px;
+}
+
+.title h2{
+	color: white;
+	font-size: 75px;
+	width: 1130px;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+
+.card{
+	height: 365px;
+	width: 335px;
+	padding: 20px 35px;
+	background: #101010;
+	border-radius: 20px;
+	margin: 15px;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.card i{
+	font-size: 50px;
+	display: block;
+	text-align: center;
+	margin: 25px 0px;
+	color: #0058f9;
+
+}
+
+h5{
+	color: white;
+	font-size: 23px;
+	margin-bottom: 15px;
+}
+
+.pra p{
+	color: #fcfc;
+	font-size: 16px;
+	line-height: 27px;
+	margin-bottom: 25px;
+}
+
+.card .button{
+	background-color:#0058f9;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 9px 22px;
+	border-radius: 30px;
+	transition: .4s; 
+}
+
+.card .button:hover{
+	background-color: transparent;
+	border: 2px solid #0058f9;
+	cursor: pointer;
+}
+
+/* kontak */
+#contact-me{
+	width: 100%;
+    background: #000000;
     display: flex;
-  }
-  
-  a {
-    color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
-  }
-  
-  a:hover {
-    color: rgba();
-  }
-  /* Header */
-  header {
-    padding: 20px 100px;
-    display: inline-block;
-    width: inherit;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  header h1 {
-    float: left;
-  }
-  
-  /* Navigasi Menu */
-  
-  nav {
-    float: right;
-  }
-  
-  nav ul {
-    padding: 9.5px 0px;
-  }
-  
-  nav li {
-    display: inline;
-    padding: 0px 10px;
-  }
-  
-  /* Section Banner */
-  .banner {
-    text-align: center;
-    background: url()rgb(255, 255, 255);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-position: bottom;
-    padding: 50px 0;
-  }
-  
-  .banner-content {
-    background: hsl(0, 0%, 0%);
-    padding: 50px;
-    width: 50%;
-    color: #fff;
-    margin: 0 auto;
-  }
-  
-  .banner-content h2, .banner-content p {
-    margin-bottom: 15px;
-  }
-  
-  
-  .banner-pic {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
-  
-  .github, .instagram, .whatsapp {
-    width: 50px;
-    height: 50px;
-    padding: 5px;
-    background: #ebebeb;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .github img, .instagram img, .whatsapp img {
-    border-radius: 50%;
-  }
-  
-  /* Section Tentang Saya */
-.tentang .wrapper {
-    align-items: stretch;
+    /* align-items: center; */
+    /* flex-direction: column; */
     justify-content: center;
-}
-
-.kanan, .kiri {
-    width: 50%;
-    padding: 10px 0 0 0;
-}
-
-.kanan {
-    padding-left: 50px;
-    text-align: justify;
-    padding-right: 100px;
-    font-size: large;
-}
-
-.kiri {
-    padding-right: 200px;
-    padding-left: 200px;
-}
-
-  
-  
-  /* section portofolio */
-.portofolio {
-    background-color: black;
-    color: #ffffff;
-}
-
-.portofolio h2 {
-    color: #ffffff;
-}
-
-.portofolio .wrapper {
-    align-items: center;
-    margin-top: 20px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    row-gap: 2px;
-}
-
-.porto-title {
-    font-weight: 300;
-    margin-top: 10px;
-    text-transform: uppercase;
-}
-
-.porto-card {
-    text-align: center;
-    width: 23%;
-}
-
-.porto-card img {
-    width: 100%;
-    height: 50px;
-    object-fit: cover;
-}
-
-.portofolio a {
-    color: #ffffff;
-}
-
-.portofolio a:hover {
-    color: #ffffff;
-}
-  
-  /* Section Nilai & Sertifikasi  */
-  .nilai {
-    background: #fff;
-  }
-  
-  .nilai .wrapper {
-    flex-direction: column;
-    margin-top: 50px;
-  }
-  
-  .nilai-title, .sertifikasi-title {
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
-  
-  .tabel-nilai, .tabel-sertifikasi {
-    border: 1px solid #808080;
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .tabel-nilai td, .tabel-nilai th, .tabel-sertifikasi td, .tabel-sertifikasi th {
-    border: 1px solid #000;
-    padding: 15px 20px;
-  }
-  
-  .tabel-nilai th, .tabel-sertifikasi th {
-    background: #808080;
-    color: #fff;
-  }
-  
-  .tabel-nilai td, t.tabel-sertifikasi td {
-    text-align: center;
-  }
-  
-  table .certificate {
     display: flex;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-  }
-  /* Section Kontak */
-  .kontak {
-    min-height: 80vh;
-    background: url() rgba(0, 0, 0, 0.1);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-position: top;
-    color: rgb(0, 0, 0);
-  }
-  
-  .kontak .section-title {
-    margin-bottom: 30px;
-  }
-  
-  .kontak-box {
-    padding: 20px 50px;
-    background: #aaa;
-    width: 350px;
-    margin: 0 auto;
-    text-align: right;
-  }
-  
-  .kontak input, .kontak textarea {
-    width: 100%;
-    outline: none;
-    border: none;
-    margin-left: 10px;
-  }
-  
-  .kontak-name, .kontak-email, .kontak-pesan {
-    background: #fff;
-    color: #000;
-    border: 1px solid gray;
-    padding: 10px;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+	padding: 100px 400px;
 }
-  
-  .btn-kontak {
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    padding: 10px;
+
+#contact-me .column {
+    width: calc(50% - 30px);
+}
+
+#contact-me .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#contact-me p{
+	color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#contact-me .left .icons {
+    margin: 10px 0;
+}
+
+#contact-me .row {
+    display: flex;
+    height: 65px;
+    align-items: center;
+	color: white;
+}
+
+#contact-me .row .info {
+    margin-left: 30px;
+}
+
+#contact-me .info .head {
+    font-weight: 800;
+    /* color: white; */
+    height: 20px;
+}
+
+#contact-me .info .sub-title {
+	color: white;
+}
+
+#contact-me .right form .fields {
+    display: flex;
+}
+
+#contact-me .right form .field, #contact-me .right form .fields .field {
+    height: 45px;
+    width: 105%;
+    margin-bottom: 15px;
+}
+
+#contact-me .right form .field input, #contact-me .right form .textarea textarea {
+    height: 100%;
+    width: 93%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
     outline: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 20px 0;
-    font-size: 20px;
-  }
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#contact-me .button-two{
+	background-color:#0058f9;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: .4s; 
+}
+
+#contact-me .button-two:hover{
+	background-color: transparent;
+	border: 2px solid #0058f9;
+	cursor: pointer;
+}
+
+/* footer */
+footer{
+	position: relative;
+	width: 100%;
+	height: 280px;
+	background: #191919;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer p:nth-child(1){
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+footer p:nth-child(2){
+	color: rgb(255, 255, 255);
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	line-height: 26px;
+}
+
+/* sosial */
+.social{
+	display: flex;
+	margin-bottom: 25px;
+}
+
+.social a{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  #0058f9;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+
+.end{
+	position: absolute;
+	color:#ffffff;
+	bottom: 35px;
+	font-size: 20px; 
+}
